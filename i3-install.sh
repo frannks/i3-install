@@ -71,59 +71,59 @@ builds(){
 # Copiando arquivos
 copy_files(){
   clear && echo -e "[!] Copiando arquivos..." && sleep 2
-  cp $HOME/.frannks-mydots/dotfiles/bin/* $HOME/.local/bin
+  cp $HOME/.frannks-mydots/mydots/bin/* $HOME/.local/bin
   cd $HOME/.local/bin && wget -c "https://github.com/frannks/mydots/raw/main/bin/mastoot"
   cd $HOME/.local/bin && chmod +x *
-  cp $HOME/.frannks-mydots/dotfiles/scripts/* $HOME/Scripts
+  cp $HOME/.frannks-mydots/mydots/scripts/* $HOME/Scripts
   cd $HOME/Scripts && chmod +x *
   cd $HOME/Scripts
   wget -c "https://github.com/frannks/mydots/raw/main/scripts/short-url.py"
 
-  cp $HOME/.frannks-mydots/dotfiles/fonts/* $HOME/.fonts
-  cp $HOME/.frannks-mydots/dotfiles/home/.zshrc $HOME
-  cp $HOME/.frannks-mydots/dotfiles/home/.zshenv $HOME
-  cp $HOME/.frannks-mydots/dotfiles/home/.zprofile $HOME
-  cp $HOME/.frannks-mydots/dotfiles/home/.aliases $HOME
-  cp $HOME/.frannks-mydots/dotfiles/home/.scripts $HOME
-  cp $HOME/.frannks-mydots/dotfiles/home/.emojis $HOME
+  cp $HOME/.frannks-mydots/mydots/fonts/* $HOME/.fonts
+  cp $HOME/.frannks-mydots/mydots/home/.zshrc $HOME
+  cp $HOME/.frannks-mydots/mydots/home/.zshenv $HOME
+  cp $HOME/.frannks-mydots/mydots/home/.zprofile $HOME
+  cp $HOME/.frannks-mydots/mydots/home/.aliases $HOME
+  cp $HOME/.frannks-mydots/mydots/home/.scripts $HOME
+  cp $HOME/.frannks-mydots/mydots/home/.emojis $HOME
   touch .zhistory $HOME
-  sudo cp $HOME/.frannks-mydots/dotfiles/fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
-  sudo cp $HOME/.frannks-mydots/dotfiles/fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
-  sudo cp $HOME/.frannks-mydots/dotfiles/fonts/Poppins.otf /usr/share/fonts
-  sudo cp $HOME/.frannks-mydots/dotfiles/fonts/MesloLGS NF Regular.ttf /usr/share/fonts/TTF
-  sudo cp $HOME/.local/bin/snapshots-crontab /usr/bin
+  sudo cp $HOME/.frannks-mydots/mydots/fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
+  sudo cp $HOME/.frannks-mydots/mydots/fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
+  sudo cp $HOME/.frannks-mydots/mydots/fonts/Poppins.otf /usr/share/fonts
+  sudo cp $HOME/.frannks-mydots/mydots/fonts/MesloLGS NF Regular.ttf /usr/share/fonts/TTF
+  sudo mv $HOME/.local/bin/snapshots-crontab /usr/bin
+  sudo chmod +x /usr/bin/snapshots-crontab
 }
 
 # Finalizando o script
 end_script(){
-  cp $HOME/.frannks-mydots/dotfiles/.config/picom.conf $HOME/.config
-  cp $HOME/.frannks-mydots/dotfiles/.config/starship.toml $HOME/.config
-  cp $HOME/.frannks-mydots/dotfiles/.config/i3/config $HOME/.config/i3/
-  cp -r $HOME/.frannks-mydots/dotfiles/.config/polybar/scripts $HOME/.config/polybar
-  cp $HOME/.frannks-mydots/dotfiles/.config/polybar/config $HOME/.config/polybar
+  cp $HOME/.frannks-mydots/mydots/.config/picom.conf $HOME/.config
+  cp $HOME/.frannks-mydots/mydots/.config/starship.toml $HOME/.config
+  cp $HOME/.frannks-mydots/mydots/.config/i3/config $HOME/.config/i3/
+  cp -r $HOME/.frannks-mydots/mydots/.config/polybar/scripts $HOME/.config/polybar
+  cp $HOME/.frannks-mydots/mydots/.config/polybar/config $HOME/.config/polybar
   chmod +x $HOME/.config/polybar/scripts/*
   sudo pacman -S rofi --noconfirm
-  cp $HOME/.frannks-mydots/dotfiles/lock/ArchLinux.png $HOME/.Lock
-  #cp -r $HOME/.frannks-mydots/dotfiles/.config/qutebrowser/config.py $HOME/.config
-  cp $HOME/.frannks-mydots/dotfiles/.config/rofi/drun.rasi $HOME/.config/rofi/
-  cp $HOME/.frannks-mydots/dotfiles/.config/rofi/themes/dark.rasi $HOME/.config/rofi/themes/
-  cp $HOME/.frannks-mydots/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty
-  cp $HOME/.frannks-mydots/dotfiles/.config/kitty/theme.conf $HOME/.config/kitty
+  #cp -r $HOME/.frannks-mydots/mydots/.config/qutebrowser/config.py $HOME/.config
+  cp $HOME/.frannks-mydots/mydots/.config/rofi/drun.rasi $HOME/.config/rofi/
+  cp $HOME/.frannks-mydots/mydots/.config/rofi/themes/dark.rasi $HOME/.config/rofi/themes/
+  cp $HOME/.frannks-mydots/mydots/.config/kitty/kitty.conf $HOME/.config/kitty
+  cp $HOME/.frannks-mydots/mydots/.config/kitty/theme.conf $HOME/.config/kitty
   cd $HOME/.config/rofi && wget -c "https://github.com/frannks/mydots/raw/main/.config/rofi/search_browser.sh" && chmod +x search_browser.sh
   sudo ln -sv /usr/bin/kitty /usr/bin/xterm
-  cp $HOME/.frannks-mydots/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
-  cp $HOME/.frannks-mydots/dotfiles/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
+  cp $HOME/.frannks-mydots/mydots/.config/dunst/dunstrc $HOME/.config/dunst
+  cp $HOME/.frannks-mydots/mydots/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
   xdg-mime default org.pwmt.zathura.desktop application/pdf
-  cp $HOME/.frannks-mydots/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
+  cp $HOME/.frannks-mydots/mydots/.config/nvim/init.vim $HOME/.config/nvim
   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
-  #cp $HOME/.frannks-repo/dotfiles/.config/qutebrowser/* $HOME/.config/qutebrowser && cd $HOME/.config/qutebrowser && pip install -r requirements.txt && cd $HOME
+  #cp $HOME/.frannks-mydots/mydots/.config/qutebrowser/* $HOME/.config/qutebrowser && cd $HOME/.config/qutebrowser && pip install -r requirements.txt && cd $HOME
 
   #mkdir $HOME/Downloads/qute_down
 
   clear && cd $HOME/Wallpapers
-  wget -c "https://github.com/frannks/wallpapers/blob/main/004.jpg"
+  wget -c "https://raw.githubusercontent.com/frannks/wallpapers/main/004.jpg"
   wal -i $HOME/Wallpapers/004.jpg
   sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
   clear && cd $HOME && i3-msg restart
