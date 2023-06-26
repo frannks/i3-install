@@ -6,6 +6,7 @@ Um script personalizado para minha configuração do i3.
 - Lembre-se minha configuração pode ser diferente da sua.
 - Leia o script antes de executa-lo.
 - NÃO me responsabilizo por nenhum dano.
+- Fique a vontade para editar o script ao seu gosto/uso.
 
 ### Download/Execução:
 ```sh
