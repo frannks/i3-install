@@ -31,10 +31,10 @@ packages_install(){
 
 # Compilações - AUR
 builds(){
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/i3-autolayout.git
-  cd i3-autolayout
-  makepkg -sic --noconfirm
+  # cd $HOME/.compile
+  # git clone https://aur.archlinux.org/i3-autolayout.git
+  # cd i3-autolayout
+  # makepkg -sic --noconfirm
 
   cd $HOME/.compile
   git clone https://aur.archlinux.org/pulseaudio-ctl.git
