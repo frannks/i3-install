@@ -124,8 +124,8 @@ end_script(){
   mkdir $HOME/Downloads/qute_down
 
   clear && cd $HOME/Wallpapers
-  wget -c "https://raw.githubusercontent.com/frannks/wallpapers/main/004.jpg"
-  wal -i $HOME/Wallpapers/004.jpg
+  wget -c "https://raw.githubusercontent.com/frannks/wallpapers/main/009.png"
+  wal -i $HOME/Wallpapers/009.png
   sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
   clear && cd $HOME && i3-msg restart
 }

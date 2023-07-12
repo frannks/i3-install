@@ -15,15 +15,15 @@ curl https://raw.githubusercontent.com/frannks/i3-install/main/i3-install.sh |ba
 
 # i3
 
-<img src="i3Car.png">
+<img src="i3-pacman.png">
 
 # Rofi
 
-<img src="i3Car-Rofi.png">
+<img src="rofi-pacman.png">
 
 # i3-Lock
 
-<img src="i3Car-Lock.png">
+<img src="lock-pacman.png">
 
 # Links
 
