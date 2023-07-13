@@ -21,12 +21,22 @@ i3PATH(){
   mkdir $HOME/Wallpapers
   mkdir $HOME/.projects
   mkdir $HOME/.config/qutebrowser
+  mkdir $HOME/Franks
+  mkdir -p $HOME/Franks/Estudos
+  mkdir -p $HOME/Franks/Games
+  mkdir -p $HOME/Franks/Filmes
+  mkdir -p $HOME/Franks/Livros
+  mkdir -p $HOME/Franks/Python
+  mkdir -p $HOME/Franks/ShellScripts
+  mkdir -p $HOME/Franks/Projetos/TelegramBots
+  mkdir -p $HOME/Franks/Projetos/Dockerfiles
+  mkdir -p $HOME/Franks/Projetos/Repository
 }
 
 # Instalação de pacotes
 packages_install(){
   #clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S arandr sxiv rustup scrot picom cronie polybar heimdall qutebrowser tmate meson htop unzip unrar zip p7zip nitrogen socat clamav thunderbird-i18n-pt-br scrcpy dysk qbittorrent tor dunst fuse mpv libnotify pacman-contrib lxappearance gvfs-mtp xdg-user-dirs w3m ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-font-awesome imagemagick inetutils bc base-devel wmctrl lsd yt-dlp bat net-tools polkit-gnome nodejs yarn fzf ueberzug dmenu man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S arandr sxiv rustup scrot picom cronie polybar heimdall qutebrowser tmate meson htop unzip unrar zip p7zip nitrogen socat clamav thunderbird-i18n-pt-br scrcpy dysk qbittorrent tor dunst fuse mpv libnotify pacman-contrib lxappearance gvfs-mtp xdg-user-dirs w3m ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-font-awesome imagemagick inetutils bc base-devel wmctrl lsd yt-dlp bat net-tools polkit-gnome nodejs yarn fzf ueberzug dmenu man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
@@ -35,6 +45,11 @@ builds(){
   cd $HOME/.compile
   git clone https://aur.archlinux.org/i3-autolayout.git
   cd i3-autolayout
+  makepkg -sic --noconfirm
+
+  cd $HOME/.compile
+  git clone https://aur.archlinux.org/adwsteamgtk.git
+  cd adwsteamgtk
   makepkg -sic --noconfirm
 
   clear
