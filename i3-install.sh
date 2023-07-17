@@ -22,6 +22,7 @@ i3PATH(){
   mkdir $HOME/.projects
   mkdir $HOME/.config/qutebrowser
   mkdir $HOME/Franks
+  mkdir -p $HOME/.config/mpv/scripts
   mkdir -p $HOME/Franks/Estudos
   mkdir -p $HOME/Franks/Games
   mkdir -p $HOME/Franks/Filmes
@@ -113,6 +114,7 @@ copy_files(){
 
 # Finalizando o script
 end_script(){
+  cp $HOME/.frannks-mydots/mydots/.config/mpv/scripts/* $HOME/.config/mpv/scripts
   cp $HOME/.frannks-mydots/mydots/.config/picom.conf $HOME/.config
   cp $HOME/.frannks-mydots/mydots/.config/starship.toml $HOME/.config
   cp $HOME/.frannks-mydots/mydots/.config/i3/config $HOME/.config/i3/
