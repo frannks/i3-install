@@ -28,6 +28,7 @@ i3PATH(){
   mkdir -p $HOME/Franks/Filmes
   mkdir -p $HOME/Franks/Livros
   mkdir -p $HOME/Franks/Python
+  mkdir -p $HOME/Franks/C
   mkdir -p $HOME/Franks/ShellScripts
   mkdir -p $HOME/Franks/Projetos/TelegramBots
   mkdir -p $HOME/Franks/Projetos/Dockerfiles
@@ -37,7 +38,7 @@ i3PATH(){
 # Instalação de pacotes
 packages_install(){
   #clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S arandr sxiv rustup scrot picom cronie polybar heimdall qutebrowser slop tmate meson htop unzip unrar zip p7zip nitrogen socat clamav thunderbird-i18n-pt-br scrcpy dysk qbittorrent tor dunst fuse mpv libnotify pacman-contrib lxappearance gvfs-mtp xdg-user-dirs w3m ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-font-awesome imagemagick inetutils bc base-devel wmctrl lsd yt-dlp bat net-tools polkit-gnome nodejs yarn fzf ueberzug dmenu man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup scrot picom cronie polybar qutebrowser slop tmate meson htop unzip unrar zip p7zip socat tor dunst fuse mpv libnotify pacman-contrib lxappearance gvfs-mtp xdg-user-dirs w3m ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-font-awesome imagemagick inetutils bc base-devel wmctrl lsd yt-dlp bat net-tools polkit-gnome nodejs yarn fzf ueberzug dmenu man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
