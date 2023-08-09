@@ -54,11 +54,6 @@ builds(){
   cd i3-autolayout
   makepkg -sic --noconfirm
 
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/adwsteamgtk.git
-  cd adwsteamgtk
-  makepkg -sic --noconfirm
-
   clear
   cd $HOME/.compile
   git clone https://aur.archlinux.org/wal-telegram-git.git
