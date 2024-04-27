@@ -38,17 +38,12 @@ i3PATH(){
 # Instalação de pacotes
 packages_install(){
   #clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S rustup gucharmap kitty scrot picom cronie polybar firefox-i18n-pt-br slop tmate meson htop unzip unrar zip p7zip socat tor dunst fuse mpv gpick shotgun hacksaw xdotool gpick nitrogen libnotify pacman-contrib lxappearance gvfs-mtp xdg-user-dirs w3m ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome imagemagick inetutils bc base-devel wmctrl lsd yt-dlp bat net-tools dosfstools polkit-gnome nodejs yarn fzf ueberzug dmenu man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
+  clear && sudo pacman -S rustup gucharmap kitty scrot picom cronie polybar firefox-i18n-pt-br slop tmate meson htop unzip unrar zip p7zip socat tor dunst fuse mpv gpick shotgun hacksaw xdotool nitrogen libnotify pacman-contrib lxappearance gvfs-mtp xdg-user-dirs w3m ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector ttf-jetbrains-mono ttf-dejavu ttf-font-awesome imagemagick inetutils bc base-devel wmctrl lsd yt-dlp bat net-tools dosfstools polkit-gnome nodejs yarn fzf ueberzug dmenu man-db python-pywal wget pyenv python-pipx python-jedi python-pylint python-requests python-pyperclip --noconfirm && xdg-user-dirs-update
   rustup default stable && clear
 }
 
 # Compilações - AUR
 builds(){
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/bito-cli.git
-  cd bito-cli
-  makepkg -sic --noconfirm
-
   cd $HOME/.compile
   git clone https://aur.archlinux.org/i3-autolayout.git
   cd i3-autolayout
@@ -66,6 +61,7 @@ builds(){
   cd $HOME/.compile/i3lock-color
   makepkg -sic --noconfirm
 
+  #clear
   #cd $HOME/.compile
   #git clone https://aur.archlinux.org/pulseaudio-ctl.git
   #cd pulseaudio-ctl
@@ -142,8 +138,8 @@ end_script(){
   mkdir $HOME/Downloads/qute_down
 
   clear && cd $HOME/Wallpapers
-  wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/019.png"
-  wal -i $HOME/Wallpapers/019.png
+  wget -c "https://raw.githubusercontent.com/frannks/wallpack/main/012.jpg"
+  wal -i $HOME/Wallpapers/012.jpg
   sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji --noconfirm
   clear && cd $HOME && i3-msg restart
 }
